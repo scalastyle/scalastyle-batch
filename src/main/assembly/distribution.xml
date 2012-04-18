@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly
+    xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+
+    <id>distribution</id>
+
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <includeBaseDirectory>true</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory></outputDirectory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>${project.build.directory}/lib</directory>
+            <outputDirectory>lib</outputDirectory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>${project.basedir}/src/main/config</directory>
+            <outputDirectory>config</outputDirectory>
+            <filtered>false</filtered>
+            <includes>
+                <include>*.*</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>${project.basedir}/src/main/doc</directory>
+            <outputDirectory>doc</outputDirectory>
+            <filtered>false</filtered>
+            <includes>
+                <include>*.*</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>${batch.common.distribution.dir}/src/main/assembly/scripts</directory>
+            <outputDirectory></outputDirectory>
+            <filtered>true</filtered>
+            <includes>
+                <include>*.bat</include>
+                <include>*.sh</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>${project.basedir}/src/main/assembly/scripts</directory>
+            <outputDirectory></outputDirectory>
+            <filtered>false</filtered>
+            <includes>
+                <include>*.bat</include>
+                <include>*.sh</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <directory>${batch.common.distribution.dir}/src/main/assembly/placeholders/logs</directory>
+            <outputDirectory>logs</outputDirectory>
+        </fileSet>
+    </fileSets>
+
+</assembly>
