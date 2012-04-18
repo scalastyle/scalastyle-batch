@@ -1,0 +1,1 @@
+You'll need to use this project in conjunction with [scalastyle](https://github.com/scalastyle/scalastyle/blob/master/README.md). See the [README.md](https://github.com/scalastyle/scalastyle/blob/master/README.md) for that project on how to use it.
