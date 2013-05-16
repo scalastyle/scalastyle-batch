@@ -7,15 +7,15 @@
     <version>7</version>
   </parent>
   <groupId>org.scalastyle</groupId>
-  <artifactId>scalastyle-batch_2.9.2</artifactId>
-  <version>0.2.1-SNAPSHOT</version>
+  <artifactId>scalastyle-batch_2.10</artifactId>
+  <version>0.3.0-SNAPSHOT</version>
   <name>Batch for launching scalastyle from the command line</name>
   <packaging>jar</packaging>
   <description>Batch for launching scalastyle from the command line</description>
 
   <properties>
-    <scalastyle.version>0.2.0</scalastyle.version>
-    <scala.version>2.9.2</scala.version>
+    <scalastyle.version>0.3.0-SNAPSHOT</scalastyle.version>
+    <scala.version>2.10</scala.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
