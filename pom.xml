@@ -15,14 +15,13 @@
 
   <properties>
     <scalastyle.version>0.3.2-SNAPSHOT</scalastyle.version>
-    <scala.version>2.10</scala.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>scalastyle_${scala.version}</artifactId>
+      <artifactId>scalastyle_2.10</artifactId>
       <version>${scalastyle.version}</version>
     </dependency>
   </dependencies>
