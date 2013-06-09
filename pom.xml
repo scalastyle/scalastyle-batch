@@ -14,7 +14,7 @@
   <description>Batch for launching scalastyle from the command line</description>
 
   <properties>
-    <scalastyle.version>0.3.1</scalastyle.version>
+    <scalastyle.version>0.3.2</scalastyle.version>
     <scala.version>2.10</scala.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
