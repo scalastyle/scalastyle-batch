@@ -5,8 +5,8 @@ usage() {
 }
 
 case $1 in
-deploy)	phase=deploy ;;
-*)	phase=package ;;
+deploy)	phase=deploy ; profile="-Psonatype-oss-release" ;;
+*)	phase=package ; profile="" ;;
 esac
 
 replace_version() {
@@ -26,6 +26,7 @@ replace_versions() {
 	esac
 
 	replace_version artifactId scalastyle-batch_2.10 scalastyle-batch_$version
+	replace_version artifactId scalastyle_2.10 scalastyle_$version
 	replace_version scala.version 2.10.0 $version
 	replace_version scala.library.version 2.10.0 $version
 	replace_version scalariform.artifactId scalariform_2.10 scalariform_$version
@@ -47,5 +48,5 @@ do
 
 	rm -rf target/$builddir
 	mkdir -p target
-	( cd target; git clone --depth=1 file://$dir $builddir; cd $builddir; rm -rf .git; replace_versions $version; mvn $phase)
+	( cd target; git clone --depth=1 file://$dir $builddir; cd $builddir; rm -rf .git; replace_versions $version; mvn $phase $profile)
 done
