@@ -1,1 +1,2 @@
-You'll need to use this project in conjunction with [scalastyle](https://github.com/scalastyle/scalastyle/blob/master/README.md). See the [README.md](https://github.com/scalastyle/scalastyle/blob/master/README.md) for that project on how to use it.
+This project is superseded by the uber jar created by the scalastyle project.
+See [Command line](http://www.scalastyle.org/command-line.html).
